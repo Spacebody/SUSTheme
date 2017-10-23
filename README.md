@@ -1,7 +1,8 @@
-# sustech LaTex color theme
-The latex color theme of SUSTech.
+# sustech LaTex theme
+The latex theme for presentation in SUSTech.
 
-- blue color (Fan Jiang)
-- modern theme (modifeid from [mtheme](https://github.com/matze/mtheme))
+- blue color theme for beamer(Fan Jiang)
+- modern theme for beamer(modifeid from [mtheme](https://github.com/matze/mtheme))
+
 
 Continue updating...
