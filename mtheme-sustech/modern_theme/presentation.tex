@@ -50,8 +50,6 @@
 \usepackage{cases}% produce multi-case equations with a separate equation number for each case
 \usepackage{changepage}%  easily change the margins of pages
 \usepackage{multicol}% provides the mul­ti­cols environment which typesets text into multiple columns 
-\usepackage{enumitem}% support for arbitrarily-deep nested lists (useful for outlines)
-\usepackage{fancyhdr} % change header and footer of any page of the document
 \usepackage{graphicx}% insert graphic files within a document
 \usepackage{indentfirst}% the beginning of any chapter/section is indented by the usual paragraph indentation
 \usepackage{setspace}% change line spacing
@@ -108,27 +106,27 @@
 
 \section{Section 1}
 \begin{frame}[fragile]{part 1}
-	Items
-	\begin{itemize}
-		\item item 1
-		\item item 2
-	\end{itemize}
+  Items
+  \begin{itemize}
+    \item item 1
+    \item item 2
+  \end{itemize}
 \end{frame}
 
 
 \section{Algorithm test}
 \begin{frame}[fragile]
 \begin{algorithm}[H]
-\caption{find\_chess\_block}	
+\caption{find\_chess\_block}  
 \begin{algorithmic}[1]
-	\REQUIRE $check\_state$, $chess\_board$, $(i,j)$,\\$points$, $chess\_color$
- 	\ENSURE  chess offset block $points$ //same color
- 	\STATE $points \gets points \cup (i,j)$ //points is the set of chess offset
-  	\FOR {$offset \in {(i-1,j), (i+1,j), (i,j-1), (i,j+1)}$}
-  		\IF {$chess\_board[offset] == color\_type$ \AND $offset \notin points$ }
-  			\STATE $points \gets$ {find\_chess\_block(\;)} //recursion
-  		\ENDIF
-  	\ENDFOR
+  \REQUIRE $check\_state$, $chess\_board$, $(i,j)$,\\$points$, $chess\_color$
+  \ENSURE  chess offset block $points$ //same color
+  \STATE $points \gets points \cup (i,j)$ //points is the set of chess offset
+    \FOR {$offset \in {(i-1,j), (i+1,j), (i,j-1), (i,j+1)}$}
+      \IF {$chess\_board[offset] == color\_type$ \AND $offset \notin points$ }
+        \STATE $points \gets$ {find\_chess\_block(\;)} //recursion
+      \ENDIF
+    \ENDFOR
  \RETURN $points$ 
  \end{algorithmic} 
  \end{algorithm}
@@ -153,7 +151,7 @@
 
   \bibliography{demo}
   \bibliographystyle{abbrv}
-	List your reference here
+  List your reference here
 \end{frame}
 
 \end{document}
