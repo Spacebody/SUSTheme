@@ -1,0 +1,99 @@
+%\documentclass{beamer}
+\documentclass[handout]{beamer}
+
+\batchmode
+% \usepackage{pgfpa,ges}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+\usepackage{amsmath,amssymb,enumerate,epsfig,bbm,calc,color,ifthen,capt-of,multimedia,hyperref}
+\usepackage{url,pythonhighlight}
+
+\usetheme[compress]{Berlin}
+\usecolortheme{sustech}
+
+% -----------------------------------------------------------------------------
+% Python Code Listing
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+\usepackage{textcomp}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+upquote=true,
+basicstyle=\ttm,
+otherkeywords={self,True,False,exception},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+%frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+% -----------------------------------------------------------------------------
+
+\title{You Presentation}
+\author{Your name}
+\institute{Your department}
+\date{\today} % can be specified
+
+% University/College/School logo
+\pgfdeclareimage[height=0.5cm]{sustech-logo}{sustech-logo.pdf}
+\logo{\pgfuseimage{sustech-logo}\hspace*{0.3cm}}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\beamerdefaultoverlayspecification{<+->}
+% -----------------------------------------------------------------------------
+\begin{document}
+% -----------------------------------------------------------------------------
+\frame{\titlepage}
+\section[Outline]{}
+\begin{frame}[allowframebreaks]{Outline}
+  \tableofcontents
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\section{Section}
+\subsection{Subsection}
+\begin{frame}[fragile]{Frame\ 1}
+  \begin{itemize}
+  	\item item 1
+    \item item 2
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Frame\ 2}
+  \begin{itemize}
+    \item item 1
+    \item item 2
+      \begin{itemize}
+        \item item 1
+        \item item 2
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\end{document}
